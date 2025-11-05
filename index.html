@@ -72,6 +72,7 @@
           <div class="swiper-slide swiper-slide-2"></div>
           <div class="swiper-slide swiper-slide-3"></div>
         </div>
+        <div class="swiper-pagination hero__pag"></div>
       </div>
       <div class="section_hero__textblock">
         <h1 class="section_hero__h1">Проектные решения любой сложности</h1>
@@ -79,34 +80,25 @@
           остаются уделом проектантов</span>
         <button class="btn">Заказать расчёт</button>
       </div>
-
-      <div class="swiper-pagination hero__pag"></div>
     </div>
   </section>
 
-  <script>
-    const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
+ <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const swiper = new Swiper('.swiper', {
+    direction: 'horizontal',
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
 });
-  </script>
+</script>
 
 
   <section class="section-do">
