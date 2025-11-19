@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
 </head>
 
 <body>
@@ -88,14 +89,25 @@ document.addEventListener('DOMContentLoaded', function() {
   const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
+    autoplay: false, // отключаем автопереключение
+
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
     },
+
+    // Добавляем навигацию по клику на слайд
+    navigation: {
+      nextEl: '.swiper-slide', // клик на любой слайд = следующий
+    },
+  });
+
+  // Обработчик клика на слайды
+  document.querySelectorAll('.swiper-slide').forEach(slide => {
+    slide.style.cursor = 'pointer'; // меняем курсор на указатель
+    slide.addEventListener('click', function() {
+      swiper.slideNext(); // переключаем на следующий слайд
+    });
   });
 });
 </script>

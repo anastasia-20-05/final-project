@@ -1,0 +1,798 @@
+@media (max-width: 1500px) {
+  .footer-container {
+    gap: 40px;
+    align-items: flex-start;
+  }
+
+  .footer-text {
+    max-width: 350px;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 50px;
+  }
+
+  .section_hero {
+    padding: 0 50px;
+  }
+
+  .section_hero__h1 {
+    font-size: 58px;
+    line-height: 70px;
+  }
+
+  /* Футер - улучшенная адаптация */
+  .footer-container {
+    position: relative;
+    gap: 30px;
+  }
+
+  .footer-text {
+    margin-top: 0;
+    max-width: 300px;
+    font-size: 14px;
+    clear: none;
+    align-self: flex-start;
+  }
+
+  /* Секция "О нас" - улучшенная адаптация */
+  .section-do-list_1,
+  .section-do-list_2 {
+    transition: all 0.3s ease;
+  }
+}
+
+@media (max-width: 1070px) {
+  /* Футер - предотвращаем прилипание текста к форме */
+  .footer-container {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .footer-text {
+    display: none;
+  }
+
+  .section {
+    order: 2;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .footer-left {
+    order: 1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1059px) {
+  .footer-container {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav-list {
+    display: none;
+  }
+
+  .nav {
+    margin-left: 0;
+  }
+
+  .search {
+    margin-left: 0;
+  }
+
+  .container {
+    max-width: 1024px;
+    padding: 0 40px;
+  }
+
+  .section_hero {
+    padding: 0 40px;
+  }
+
+  .header-container {
+    justify-content: space-between;
+  }
+
+  .section-work-heading {
+    max-width: 437px;
+  }
+
+  /* Секция "Как мы работаем" - исправляем картинки */
+  .section-work-heading_1 {
+    background: url(../img/Rectangle18.png) no-repeat center center;
+    width: 100%;
+    height: 400px;
+    margin-top: 30px;
+    margin-left: 0;
+    background-size: cover;
+    transition: all 0.3s ease;
+  }
+
+  /* Гарантируем правильное отображение всех табов */
+  .tabs-item[data-target="one"] .section-work-heading_1 {
+    background: url(../img/Rectangle18.png) no-repeat center center;
+    background-size: cover;
+  }
+
+  .tabs-item[data-target="two"] .section-work-heading_1 {
+    background: url(../img/Rectangle188.png) no-repeat center center;
+    background-size: cover;
+  }
+
+  .tabs-item[data-target="three"] .section-work-heading_1 {
+    background: url(../img/Rectangle19.png) no-repeat center center;
+    background-size: cover;
+  }
+
+  .tabs-item[data-target="four"] .section-work-heading_1 {
+    background: url(../img/Rectangle20.png) no-repeat center center;
+    background-size: cover;
+  }
+
+  .section_hero__h1 {
+    font-size: 50px;
+    margin-top: 60px;
+    line-height: 60px;
+  }
+
+  /* Гамбургер иконка */
+  .menu-btn {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index:2;
+    overflow: hidden;
+  }
+
+  .menu-btn span {
+    width: 30px;
+    height: 3px;
+    position: absolute;
+    background-color: #222222;
+    transition: all 0.5s;
+  }
+
+  .menu-btn span:nth-of-type(2) {
+    top: calc(50% - 5px);
+  }
+  .menu-btn span:nth-of-type(3) {
+    top: calc(50% + 5px);
+  }
+
+  .menu-btn.active span:nth-of-type(1) {
+    display: none;
+  }
+  .menu-btn.active span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);
+  }
+  .menu-btn.active span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg);
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 41%;
+    height: 50%;
+    padding: 15px;
+    background: white;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+  }
+
+  .menu.active {
+    transform: translateX(0);
+  }
+
+  .menu li {
+    list-style-type: none;
+  }
+
+  .btn {
+    margin-top: 40px;
+  }
+
+  .logo-img {
+    width: 150px;
+    height: 48px;
+  }
+
+  /* Секция "О нас" - улучшенная адаптация */
+  .section-do-list_1 {
+    margin-right: 0;
+    margin-top: 0;
+    width: 100%;
+    min-height: 400px;
+  }
+
+  .section-do-list_2 {
+    width: 100%;
+  }
+
+  .section-do-item,
+  .section-do-item2 {
+    padding: 60px 40px 60px 220px;
+    background-position: 40px center;
+    background-size: 150px 130px;
+    transition: all 0.3s ease;
+  }
+
+  .work {
+    flex-direction: column;
+  }
+
+  .btn-submit {
+    padding: 19px 38px;
+  }
+
+  /* Исправление кнопки route */
+  .route {
+    padding: 15px 25px;
+    font-size: 14px;
+    right: 20px;
+    top: 50px;
+  }
+
+  .list3 {
+    max-width: 400px;
+  }
+
+  /* Секция work адаптация */
+  .work1 {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 955px) {
+  /* Исправление для табов - гарантируем правильное переключение картинок */
+  .tabs-content .tabs-item {
+    display: none;
+  }
+
+  .tabs-content .tabs-item.active {
+    display: block;
+  }
+
+  .section-work-heading_1 {
+    height: 350px;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .section_hero {
+    padding: 0 30px;
+  }
+
+  .section_hero__h1 {
+    font-size: 42px;
+    line-height: 52px;
+  }
+
+  /* Футер */
+  .footer-container {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .section {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .form-container {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .footer-left {
+    width: 100%;
+  }
+
+  /* Картинки секции work */
+  .section-work-heading_1 {
+    height: 350px;
+  }
+
+  /* Секция "О нас" - улучшенная адаптация */
+  .section-do-item,
+  .section-do-item2 {
+    padding: 50px 30px 50px 200px;
+    background-size: 140px 120px;
+  }
+}
+
+@media (max-width: 850px) {
+  /* Секция "О нас" - плавное уменьшение */
+  .section-do-item,
+  .section-do-item2 {
+    padding: 45px 25px 45px 180px;
+    background-size: 130px 110px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-do-item,
+  .section-do-item2 {
+    padding: 40px 20px 40px 160px;
+    background-position: 20px center;
+    background-size: 120px 100px;
+  }
+
+  /* Исправление кнопки route */
+  .route {
+    padding: 12px 20px;
+    font-size: 13px;
+    right: 15px;
+    top: 40px;
+  }
+
+  .list3 {
+    max-width: 350px;
+    font-size: 15px;
+  }
+
+  /* Секция work адаптация */
+  .section-work-heading_1 {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Гарантируем отображение правильных изображений для всех табов */
+  .tabs-item[data-target="one"] .section-work-heading_1 {
+    background: url(../img/Rectangle18.png) no-repeat center center !important;
+    background-size: cover !important;
+  }
+
+  .tabs-item[data-target="two"] .section-work-heading_1 {
+    background: url(../img/Rectangle188.png) no-repeat center center !important;
+    background-size: cover !important;
+  }
+
+  .tabs-item[data-target="three"] .section-work-heading_1 {
+    background: url(../img/Rectangle19.png) no-repeat center center !important;
+    background-size: cover !important;
+  }
+
+  .tabs-item[data-target="four"] .section-work-heading_1 {
+    background: url(../img/Rectangle20.png) no-repeat center center !important;
+    background-size: cover !important;
+  }
+
+  .section-work-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .section-work-item {
+    margin-right: 15px;
+    margin-bottom: 10px;
+  }
+
+  /* Футер - форма под навигацией */
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-social-list {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .footer-nav-list {
+    text-align: center;
+  }
+
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 650px) {
+  /* Исправление кнопки "Заказать расчет" на 622px */
+  .section_hero__textblock {
+    padding: 40px 0;
+  }
+
+  .btn {
+    margin-top: 25px;
+    padding: 18px 30px;
+    font-size: 18px;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .section_hero__h1 {
+    font-size: 38px;
+    line-height: 46px;
+  }
+
+  /* Секция "О нас" - продолжаем адаптацию */
+  .section-do-item,
+  .section-do-item2 {
+    padding: 35px 15px 35px 140px;
+    background-size: 110px 90px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .section_hero {
+    padding: 0 20px;
+  }
+
+  .section_hero__h1 {
+    font-size: 36px;
+    line-height: 44px;
+    margin-top: 40px;
+  }
+
+  .section_hero__span {
+    font-size: 18px;
+  }
+
+  .section-do-item,
+  .section-do-item2 {
+    padding: 30px 15px 30px 120px;
+    background-position: 15px center;
+    background-size: 100px 80px;
+  }
+
+  /* Исправление кнопки route */
+  .route {
+    padding: 10px 18px;
+    font-size: 12px;
+    right: 10px;
+    top: 30px;
+  }
+
+  .list3 {
+    max-width: 300px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  /* Секция work адаптация */
+  .section-work-heading_1 {
+    height: 250px;
+  }
+
+  /* Гарантируем отображение всех изображений табов */
+  .tabs-content .tabs-item {
+    display: none;
+  }
+
+  .tabs-content .tabs-item.active {
+    display: block;
+  }
+
+  .btn2, .btn_n {
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  .btn_n {
+    margin-left: 0;
+  }
+
+  .btn-submit {
+    width: 100%;
+    padding: 17px;
+  }
+
+  .custom-checkbox {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  /* Секция "О нас" - переходим на компактный вид */
+  .section-do-item,
+  .section-do-item2 {
+    padding: 25px 15px 25px 15px;
+    background-position: top 20px left 15px;
+    min-height: 140px;
+  }
+
+  .section-do-item strong,
+  .section-do-item2 strong {
+    margin-top: 100px;
+    display: block;
+  }
+}
+
+@media (max-width: 485px) {
+  /* Критическое исправление для табов - гарантируем отображение картинок */
+  .tabs-item .section-work-heading_1 {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+
+  /* Принудительно устанавливаем правильные картинки для каждого таба */
+  .tabs-item[data-target="one"] .section-work-heading_1 {
+    background: url(../img/Rectangle18.png) no-repeat center center !important;
+    background-size: cover !important;
+  }
+
+  .tabs-item[data-target="two"] .section-work-heading_1 {
+    background: url(../img/Rectangle188.png) no-repeat center center !important;
+    background-size: cover !important;
+  }
+
+  .tabs-item[data-target="three"] .section-work-heading_1 {
+    background: url(../img/Rectangle19.png) no-repeat center center !important;
+    background-size: cover !important;
+  }
+
+  .tabs-item[data-target="four"] .section-work-heading_1 {
+    background: url(../img/Rectangle20.png) no-repeat center center !important;
+    background-size: cover !important;
+  }
+
+  .section-work-heading_1 {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .section_hero {
+    padding: 0 15px;
+  }
+
+  .section_hero__h1 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .section_hero__span {
+    font-size: 16px;
+  }
+
+  .btn {
+    margin-top: 25px;
+    padding: 16px 25px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .section-do-item,
+  .section-do-item2 {
+    padding: 25px 15px 25px 15px;
+    background-size: 80px 70px;
+    min-height: 130px;
+  }
+
+  .section-do-item strong,
+  .section-do-item2 strong {
+    margin-top: 90px;
+  }
+
+  .section-work-heading_1 {
+    height: 200px;
+  }
+}
+
+@media (max-width: 375px) {
+  .section_hero__h1 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .section-do-item,
+  .section-do-item2 {
+    padding: 20px 15px 20px 15px;
+    background-position: top 15px left 15px;
+    background-size: 70px 60px;
+    min-height: 120px;
+  }
+
+  .section-do-item strong,
+  .section-do-item2 strong {
+    margin-top: 80px;
+    display: block;
+  }
+
+  .section-work-heading_1 {
+    height: 180px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    max-width: 320px;
+    padding: 0 15px;
+  }
+
+  .header {
+    min-height: 74px;
+    border: none
+  }
+
+  .logo-img {
+    width: 110px;
+    height: 35px;
+  }
+
+  .swiper-slide-1 {
+    background: url(../img/logo320.jpg) no-repeat center center;
+    background-size: cover;
+    max-width: 290px;
+    height: 308px;
+  }
+
+  .swiper-slide-2 {
+    display: none;
+  }
+
+  .swiper-slide-3 {
+    display: none;
+  }
+
+  .section_hero__h1 {
+    color: #000000;
+    text-align: center;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .section_hero__span {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .section_hero__textblock {
+    padding: 0;
+    justify-content: flex-start;
+  }
+
+  .section_hero__h1 {
+    margin-top: 40px;
+  }
+
+  .btn {
+    margin-top: 15px;
+    font-size: 16px;
+    padding: 16px 25px;
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .section-do-list_1 {
+    min-width: 290px;
+    height: 200px;
+    background: url(../img/Rectangle22.png) no-repeat center center;
+    background-size: cover;
+  }
+
+  .section-do-list_2 {
+    min-width: 290px;
+  }
+
+  .section-do-list_3 {
+    display: none;
+  }
+
+  .list3 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #333333;
+  }
+
+  /* Исправление кнопки route */
+  .route.double {
+    padding: 8px 15px;
+    font-size: 11px;
+    margin-top: 10px;
+  }
+
+  .list3.double {
+    font-size: 13px;
+    max-width: 250px;
+  }
+
+  /* Секция work адаптация */
+  .work1 {
+    flex-direction: column;
+  }
+
+  .section-work-heading {
+    max-width: 290px;
+  }
+
+  /* Гарантируем отображение правильных картинок для табов на 320px */
+  .tabs-item[data-target="one"] .section-work-heading_1 {
+    background: url(../img/Rectangle18_320.png) no-repeat center center !important;
+    background-size: cover !important;
+  }
+
+  .tabs-item[data-target="two"] .section-work-heading_1 {
+    background: url(../img/Rectangle188.png) no-repeat center center !important;
+    background-size: cover !important;
+  }
+
+  .tabs-item[data-target="three"] .section-work-heading_1 {
+    background: url(../img/Rectangle19.png) no-repeat center center !important;
+    background-size: cover !important;
+  }
+
+  .tabs-item[data-target="four"] .section-work-heading_1 {
+    background: url(../img/Rectangle20.png) no-repeat center center !important;
+    background-size: cover !important;
+  }
+
+  .section-work-heading_1 {
+    background: url(../img/Rectangle18_320.png) no-repeat center center;
+    width: 100%;
+    height: 160px;
+    background-size: cover;
+  }
+
+  .section-heading {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .form-container {
+    max-width: 290px;
+  }
+
+  .footer-text {
+    display: block; /* Показываем текст в футере */
+    font-size: 13px;
+    padding: 0 10px;
+  }
+
+  footer nav {
+    display: none;
+  }
+
+  .section-work-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-work-item {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .tabs-nav__btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+  }
+}
